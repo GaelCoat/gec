@@ -22,7 +22,7 @@ module.exports = {
   'biscarosse': {
     id: 'biscarosse',
     name: 'Biscarosse',
-    cover: './img/bordeaux.jpg',
+    cover: './img/biscarosse.jpg',
     infos: {
       phone: '05 58 78 70 30',
       mail: 'hello-biscarosse@gec.fr',
@@ -41,7 +41,7 @@ module.exports = {
   'sanguinet': {
     id: 'sanguinet',
     name: 'Sanguinet',
-    cover: './img/bordeaux.jpg',
+    cover: './img/sanguinet.jpg',
     infos: {
       phone: '05 58 04 81 78',
       mail: 'hello-sanguinet@gec.fr',
