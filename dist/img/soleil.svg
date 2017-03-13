@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="44px" viewBox="0 0 47 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>soleil</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-22" transform="translate(-438.000000, -1589.000000)">
+            <g id="Valeur" transform="translate(0.000000, 750.000000)">
+                <g id="Group" transform="translate(248.000000, 751.000000)">
+                    <g id="Group-7" transform="translate(163.000000, 60.000000)">
+                        <g id="soleil" transform="translate(28.000000, 29.000000)">
+                            <g id="Capa_1">
+                                <path d="M39.6659483,19.299569 L39.6659483,19.299569 C38.7605172,18.3941379 37.2793966,18.3941379 36.3739655,19.299569 L23.8631897,31.8103448 L2.3562931,31.8103448 C1.07612069,31.8103448 0.0287068966,32.8577586 0.0287068966,34.137931 C0.0287068966,35.4181034 1.07612069,36.4655172 2.3562931,36.4655172 L24.080431,36.4655172 C24.9897414,36.4655172 25.83,36.2071552 26.499569,35.757931 L39.6667241,22.5907759 C40.5713793,21.6861207 40.5713793,20.205 39.6659483,19.299569 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <polyline id="Shape" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" points="0 38.7931034 27.1551724 38.7931034 45 20.9482759"></polyline>
+                                <path d="M45,41.8965517 L34.9137931,31.8103448" id="Shape" stroke="#ABABAB" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M43.8462931,41.1206897 L0,41.1206897 L0,38.7931034 L41.8965517,38.7931034 L43.9564655,40.8530172 C44.0557759,40.9523276 43.9851724,41.1206897 43.8462931,41.1206897 Z" id="Shape" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF" fill-rule="nonzero" cx="12.4137931" cy="7.75862069" rx="5.43103448" ry="5.43103448"></ellipse>
+                                <path d="M12.4137931,2.32758621 L12.4137931,0" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.4137931,15.5172414 L12.4137931,13.1896552" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M17.8448276,7.75862069 L20.1724138,7.75862069" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M4.65517241,7.75862069 L6.98275862,7.75862069" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8.57327586,3.91810345 L6.92767241,2.2725" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M17.8999138,13.2447414 L16.2543103,11.5991379" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M16.2543103,3.91810345 L17.8999138,2.2725" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M6.92767241,13.2447414 L8.57327586,11.5991379" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M29.4563793,3.81258621 C28.3003448,3.14534483 26.8161207,3.49137931 26.1737069,4.60474138 C28.8519828,-0.034137931 34.5894828,-1.28715517 39.2275862,1.39112069 C43.8656897,4.06939655 45.6493966,9.66491379 42.9711207,14.3030172 C43.6135345,13.1896552 43.172069,11.7310345 42.0160345,11.0637931 C40.86,10.3965517 39.4013793,10.7573276 38.7589655,11.8706897 C39.4013793,10.7573276 38.9855172,9.31422414 37.8294828,8.6462069 C36.6734483,7.97896552 35.2148276,8.34051724 34.5724138,9.45310345 C35.2148276,8.33974138 34.7989655,6.89663793 33.642931,6.22862069 C32.4868966,5.56060345 31.0282759,5.92293103 30.3858621,7.03551724 C31.0282759,5.92293103 30.6124138,4.47982759 29.4563793,3.81258621 Z" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <path d="M23.8631897,31.8103448 L24.4381034,31.235431 L35.3994828,9.66181034 C35.5934483,9.28008621 35.4413793,8.81224138 35.0596552,8.61827586 C34.6771552,8.42586207 34.2100862,8.57715517 34.0161207,8.95810345 L22.584569,31.4581034 C22.5271552,31.5713793 22.5085345,31.6908621 22.5093103,31.809569 L23.8631897,31.809569 L23.8631897,31.8103448 Z" id="Shape" fill="#ABABAB" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

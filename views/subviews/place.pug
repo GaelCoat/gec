@@ -1,0 +1,85 @@
+.container
+  header
+    .row
+      ul.tabs
+        li.openDropdown
+          | Le groupe
+          img(src='/img/arrow.svg')
+          .dropdown
+            a(href='/bordeaux') Bordeaux
+            a(href='/biscarosse') Biscarosse
+            a(href='/sanguinet') Sanguinet
+        li.scrollTo(data-scroll='waves') Nos valeurs
+        li Logo
+        li.scrollTo(data-scroll='missions') Nos missions
+        li.scrollTo(data-scroll='infos') Contact
+
+  section#home
+    .centered
+      h1 Groupe Expertise Conseil
+      h2 L'expertise comptable au service de la convivialité
+  section#waves
+    .row
+      .block.values
+        h3 Nos valeurs & notre philosophie
+        p Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+
+      .block.showData
+        span Voir nos 10 chiffres clés actualisés
+
+      ul#missions.stuff.block
+        li
+          .centered
+            i.icon
+              img(src='/img/fleche.svg')
+            span Crée son activité
+        li
+          .centered
+            i.icon
+              img(src='/img/calculette.svg')
+            span Au quotidien
+        li
+          .centered
+            i.icon
+              img(src='/img/soleil.svg')
+            span En fin d'exercice
+        li
+          .centered
+            i.icon
+              img(src='/img/lumiere.svg')
+            span Missions annexes
+
+  section#infos
+    .row
+      ul.tabs
+        li.tab
+          h6 Horaires :
+          span Lun/mar/mer
+          span Jeu/ven
+        li.tab
+          h6 Adresse :
+          span {{infos.address.alley}}
+          span {{infos.address.post}}
+        li.tab
+          h6 Contact :
+          span Mail : {{infos.mail}}
+          span Téléphone : {{infos.phone}}
+      #map
+
+  footer
+    .row
+      .left
+          <% if (place.id === 'bordeaux') { %>
+          a(href='/biscarosse') GEC Biscarosse
+          | -
+          a(href='/sanguinet') GEC Sanguinet
+          <% } else if (place.id === 'biscarosse') { %>
+          a(href='/bordeaux') GEC Bordeaux
+          | -
+          a(href='/sanguinet') GEC Sanguinet
+          <% } else { %>
+          a(href='/bordeaux') GEC Bordeaux
+          | -
+          a(href='/biscarosse') GEC Biscarosse
+          <% } %>
+      .right © 2017 Copyright GEC {{place.name}}
