@@ -241,6 +241,8 @@ section#waves{
   right: 4px;
   content: "";
   background-color: #000;
+  background-image: url(/img/btn.png);
+  background-size: 100%;
 }
 
 .row .block.showData span{
@@ -312,7 +314,7 @@ section#waves{
   content: "";
   width: 550px;
   height: 550px;
-  background-color: #313131;
+  background-color: #001d27;
   border-radius: 900px;
   left: 50%;
   top: 122px;
@@ -354,7 +356,7 @@ section#waves{
 
 .row .block.stuff li i{
   display: inline-block;
-  background-color: #313131;
+  background-color:#001d27;
   border-radius: 100px;
   height: 110px;
   text-align: center;
