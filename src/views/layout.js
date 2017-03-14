@@ -51,7 +51,7 @@ module.exports = Marionette.View.extend({
 
     var map = new Google.maps.Map(el.get(0), {
       center: pos,
-      scrollwheel: true,
+      scrollwheel: false,
       zoom: 17
     });
 

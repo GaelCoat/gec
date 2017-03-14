@@ -11,6 +11,10 @@ module.exports = {
         alley: '5 place des Quinconces',
         post: '33000 Bordeaux'
       },
+      opening: {
+        first: 'Lun-Jeu : 9h-13h 14h-18h',
+        second: 'Ven : 9h-13h 14h-17h'
+      },
     },
     pos: {
       lat: 44.8446338,
@@ -30,6 +34,10 @@ module.exports = {
         alley: '222 avenue du XIV Juillet',
         post: '40600 Biscarrosse'
       },
+      opening: {
+        first: 'Du lundi au vendredi',
+        second: '8h-12h30 et 13h30-17h'
+      },
     },
     pos: {
       lat: 44.396424,
@@ -48,6 +56,10 @@ module.exports = {
       address: {
         alley: '21 avenue du Stade',
         post: '40460 Sanguinet'
+      },
+      opening: {
+        first: 'Lun/mar/jeu/ven : 8h30-12h30',
+        second: '14h-17h30. Fermé le mercredi'
       },
     },
     pos: {
