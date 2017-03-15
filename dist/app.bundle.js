@@ -118,6 +118,7 @@ webpackJsonp([0],[
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(_, Marionette, $) {var isMobile = __webpack_require__(10);
+	var Appear = __webpack_require__(16);
 	var Places = __webpack_require__(11);
 
 	_.templateSettings = {
@@ -132,10 +133,26 @@ webpackJsonp([0],[
 	    'click .openDropdown': 'showDropdown',
 	    'click header .scrollTo': 'scrollTo',
 	    'click': 'hideDropdown',
+	    'click .veil': 'closePopup',
 	  },
+
+	  currentPopup: null,
+	  currentPlace: null,
 
 	  initialize: function(params) {
 
+	  },
+
+	  setSizes: function() {
+
+	    var that = this;
+
+	    this.$el.find('.setSize').each(function() {
+
+	      $(this).height($(this).height());
+	    });
+
+	    return this;
 	  },
 
 	  scrollTo: function(e) {
@@ -158,20 +175,52 @@ webpackJsonp([0],[
 	    return this;
 	  },
 
+	  openPopup: function(e, id) {
+
+	    this.currentPopup = id;
+
+	    $('body').addClass('modal-open');
+	    this.$el.find(this.currentPopup).show(0).addClass('open');
+	    return this;
+	  },
+
+	  closePopup: function(e) {
+
+	    window.history.pushState(null, null, this.currentPlace);
+
+	    $('body').removeClass('modal-open');
+	    this.$el.find(this.currentPopup).hide(0).removeClass('open');
+
+	    this.currentPopup = null;
+	    return this;
+	  },
+
 	  applyCover: function(el, cover) {
 
-	    el.css('background-image', 'url('+cover+')')
+	    el.css('background-image', 'url('+cover+')');
+	    this.$el.css('background-image', 'url('+cover+')');
+	    return this;
+	  },
+
+	  initAppears: function() {
+
+	    $('.show-waves').appear();
+	    $('.show-waves').on('appear', function(event, $els) { $els.addClass('ready'); });
+
 	    return this;
 	  },
 
 	  initMap: function(el, pos) {
 
 	    var Google = window.google;
+	    var zoom = 17;
+
+	    if (isMobile) zoom = 20;
 
 	    var map = new Google.maps.Map(el.get(0), {
 	      center: pos,
 	      scrollwheel: false,
-	      zoom: 17
+	      zoom: zoom
 	    });
 
 	    var marker = new Google.maps.Marker({
@@ -184,7 +233,18 @@ webpackJsonp([0],[
 
 	  renderPlace: function(id) {
 
+	    var that = this;
+
+	    window.onhashchange = function() {
+
+	      var hash = location.hash;
+	      if (that.currentPopup) that.closePopup();
+	      if (hash) that.openPopup(null, hash);
+	    }
+
 	    var place = Places[id];
+
+	    this.currentPlace = id;
 
 	    if (!place) place = Places['bordeaux'];
 
@@ -196,7 +256,9 @@ webpackJsonp([0],[
 	    this.initMap(el.find('#map'), place.pos);
 
 	    this.$el.find('.view').empty().append(el);
-	    return this;
+
+	    if (isMobile) return this.setSizes();
+	    else return this.initAppears();
 	  },
 
 	  render: function() {
@@ -228,7 +290,7 @@ webpackJsonp([0],[
 	  'bordeaux': {
 	    id: 'bordeaux',
 	    name: 'Bordeaux',
-	    cover: './img/bordeaux.jpg',
+	    cover: './img/covers/bordeaux.jpg',
 	    infos: {
 	      phone: '05 56 94 15 31',
 	      mail: 'hello-bordeaux@gec.fr',
@@ -251,7 +313,7 @@ webpackJsonp([0],[
 	  'biscarosse': {
 	    id: 'biscarosse',
 	    name: 'Biscarosse',
-	    cover: './img/biscarosse.jpg',
+	    cover: './img/covers/biscarosse.jpg',
 	    infos: {
 	      phone: '05 58 78 70 30',
 	      mail: 'hello-biscarosse@gec.fr',
@@ -274,7 +336,7 @@ webpackJsonp([0],[
 	  'sanguinet': {
 	    id: 'sanguinet',
 	    name: 'Sanguinet',
-	    cover: './img/sanguinet.jpg',
+	    cover: './img/covers/sanguinet.jpg',
 	    infos: {
 	      phone: '05 58 04 81 78',
 	      mail: 'hello-sanguinet@gec.fr',
@@ -294,6 +356,133 @@ webpackJsonp([0],[
 	  },
 
 	}
+
+
+/***/ },
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	 * jQuery appear plugin
+	 *
+	 * Copyright (c) 2012 Andrey Sidorov
+	 * licensed under MIT license.
+	 *
+	 * https://github.com/morr/jquery.appear/
+	 *
+	 * Version: 0.3.6
+	 */
+	(function($) {
+	  var selectors = [];
+
+	  var check_binded = false;
+	  var check_lock = false;
+	  var defaults = {
+	    interval: 250,
+	    force_process: false
+	  };
+	  var $window = $(window);
+
+	  var $prior_appeared = [];
+
+	  function appeared(selector) {
+	    return $(selector).filter(function() {
+	      return $(this).is(':appeared');
+	    });
+	  }
+
+	  function process() {
+	    check_lock = false;
+	    for (var index = 0, selectorsLength = selectors.length; index < selectorsLength; index++) {
+	      var $appeared = appeared(selectors[index]);
+
+	      $appeared.trigger('appear', [$appeared]);
+
+	      if ($prior_appeared[index]) {
+	        var $disappeared = $prior_appeared[index].not($appeared);
+	        $disappeared.trigger('disappear', [$disappeared]);
+	      }
+	      $prior_appeared[index] = $appeared;
+	    }
+	  }
+
+	  function add_selector(selector) {
+	    selectors.push(selector);
+	    $prior_appeared.push();
+	  }
+
+	  // "appeared" custom filter
+	  $.expr[':'].appeared = function(element) {
+	    var $element = $(element);
+	    if (!$element.is(':visible')) {
+	      return false;
+	    }
+
+	    var window_left = $window.scrollLeft();
+	    var window_top = $window.scrollTop();
+	    var offset = $element.offset();
+	    var left = offset.left;
+	    var top = offset.top;
+
+	    if (top + $element.outerHeight() >= window_top &&
+	        top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
+	        left + $element.width() >= window_left &&
+	        left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
+	      return true;
+	    } else {
+	      return false;
+	    }
+	  };
+
+	  $.fn.extend({
+	    // watching for element's appearance in browser viewport
+	    appear: function(options) {
+	      var opts = $.extend({}, defaults, options || {});
+	      var selector = this.selector || this;
+	      if (!check_binded) {
+	        var on_check = function() {
+	          if (check_lock) {
+	            return;
+	          }
+	          check_lock = true;
+
+	          setTimeout(process, opts.interval);
+	        };
+
+	        $(window).scroll(on_check).resize(on_check);
+	        check_binded = true;
+	      }
+
+	      if (opts.force_process) {
+	        setTimeout(process, opts.interval);
+	      }
+	      add_selector(selector);
+	      return $(selector);
+	    }
+	  });
+
+	  $.extend({
+	    // force elements's appearance check
+	    force_appear: function() {
+	      if (check_binded) {
+	        process();
+	        return true;
+	      }
+	      return false;
+	    }
+	  });
+	})(function() {
+	  if (true) {
+	    // Node
+	    return __webpack_require__(4);
+	  } else {
+	    return jQuery;
+	  }
+	}());
 
 
 /***/ }

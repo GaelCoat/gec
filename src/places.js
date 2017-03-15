@@ -3,7 +3,7 @@ module.exports = {
   'bordeaux': {
     id: 'bordeaux',
     name: 'Bordeaux',
-    cover: './img/bordeaux.jpg',
+    cover: './img/covers/bordeaux.jpg',
     infos: {
       phone: '05 56 94 15 31',
       mail: 'hello-bordeaux@gec.fr',
@@ -26,7 +26,7 @@ module.exports = {
   'biscarosse': {
     id: 'biscarosse',
     name: 'Biscarosse',
-    cover: './img/biscarosse.jpg',
+    cover: './img/covers/biscarosse.jpg',
     infos: {
       phone: '05 58 78 70 30',
       mail: 'hello-biscarosse@gec.fr',
@@ -49,7 +49,7 @@ module.exports = {
   'sanguinet': {
     id: 'sanguinet',
     name: 'Sanguinet',
-    cover: './img/sanguinet.jpg',
+    cover: './img/covers/sanguinet.jpg',
     infos: {
       phone: '05 58 04 81 78',
       mail: 'hello-sanguinet@gec.fr',

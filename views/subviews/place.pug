@@ -10,28 +10,40 @@
             a(href='/biscarosse') Biscarosse
             a(href='/sanguinet') Sanguinet
         li.scrollTo(data-scroll='waves') Nos valeurs
-        li Logo
+        li
+          img.logo(src='/img/logos/gec-logo-{{place.id}}.svg')
         li.scrollTo(data-scroll='missions') Nos missions
         li.scrollTo(data-scroll='infos') Contact
 
-  section#home
+      ul.tabs.mobile
+        li
+          img.logo(src='/img/logos/gec-logo-{{place.id}}.svg')
+        li.openDropdown
+          | Le groupe
+          img(src='/img/arrow.svg')
+          .dropdown
+            a(href='/bordeaux') Bordeaux
+            a(href='/biscarosse') Biscarosse
+            a(href='/sanguinet') Sanguinet
+
+  section#home.setSize
     .centered
       h1 Groupe Expertise Conseil
       h2 L'expertise comptable au service de la convivialité
   section#waves
     .row
-      .block.values
+      .block.values.show-waves(data-appear-top-offset="-150")
         h3 Nos valeurs & notre philosophie
         p Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
 
-      .block.showData
+      a.block.showData.openPopup.show-waves(data-appear-top-offset="-150", data-popup='stats', href='/{{place.id}}#stats')
         span Voir nos 10 chiffres clés actualisés
 
       ul#missions.stuff.block
-        li
+        li.show-waves(data-appear-top-offset="-150")
           .centered
             i.icon
-              img(src='/img/fleche.svg')
+              img(src='/img/icons/fleche.svg')
             span Crée son activité
           .data
             .align
@@ -40,10 +52,10 @@
               li This guy too
               li Even the pope
               li Ask her
-        li
+        li.show-waves(data-appear-top-offset="-150")
           .centered
             i.icon
-              img(src='/img/calculette.svg')
+              img(src='/img/icons/calculette.svg')
             span Au quotidien
           .data
             .align
@@ -52,10 +64,10 @@
               li This guy too
               li Even the pope
               li Ask her
-        li
+        li.show-waves(data-appear-top-offset="-150")
           .centered
             i.icon
-              img(src='/img/soleil.svg')
+              img(src='/img/icons/soleil.svg')
             span En fin d'exercice
           .data
             .align
@@ -64,10 +76,10 @@
               li This guy too
               li Even the pope
               li Ask her
-        li
+        li.show-waves(data-appear-top-offset="-150")
           .centered
             i.icon
-              img(src='/img/lumiere.svg')
+              img(src='/img/icons/lumiere.svg')
             span Missions annexes
           .data
             .align
@@ -111,3 +123,60 @@
           a(href='/biscarosse') GEC Biscarosse
           <% } %>
       .right © 2017 Copyright GEC {{place.name}}
+
+  #stats.popup
+    .veil
+    .align
+    .modal
+      .top
+        h4 Nos chiffres clé actualisés
+        span Mis à jour le 17 mars 2017
+
+      ul
+        li
+          h5 Indemnité kilométrique :
+          span 3 CV et jusqu'à 5000km : d x 0,41
+          span 4 CV et jusqu'à 5000km : d x 0,493
+          span 5 CV et jusqu'à 5000km : d x 0,543
+          span 6 CV et jusqu'à 5000km : d x 0,568
+
+        li
+          h5 SMIC :
+          span Horaire : 9,76€
+          span Mensuel : 1480,27€
+
+        li
+          h5 Indemnité kilométrique :
+          span 3 CV et jusqu'à 5000km : d x 0,41
+          span 4 CV et jusqu'à 5000km : d x 0,493
+          span 5 CV et jusqu'à 5000km : d x 0,543
+          span 6 CV et jusqu'à 5000km : d x 0,568
+
+        li
+          h5 SMIC :
+          span Horaire : 9,76€
+          span Mensuel : 1480,27€
+
+        li
+          h5 Indemnité kilométrique :
+          span 3 CV et jusqu'à 5000km : d x 0,41
+          span 4 CV et jusqu'à 5000km : d x 0,493
+          span 5 CV et jusqu'à 5000km : d x 0,543
+          span 6 CV et jusqu'à 5000km : d x 0,568
+
+        li
+          h5 SMIC :
+          span Horaire : 9,76€
+          span Mensuel : 1480,27€
+
+        li
+          h5 Indemnité kilométrique :
+          span 3 CV et jusqu'à 5000km : d x 0,41
+          span 4 CV et jusqu'à 5000km : d x 0,493
+          span 5 CV et jusqu'à 5000km : d x 0,543
+          span 6 CV et jusqu'à 5000km : d x 0,568
+
+        li
+          h5 SMIC :
+          span Horaire : 9,76€
+          span Mensuel : 1480,27€
