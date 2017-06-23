@@ -52,6 +52,10 @@
     line-height: 1.2;
   }
 
+  .row .block.values span {
+    font-size: 34px;
+  }
+
   .show-waves {
     opacity: 1;
     transform: scale(1);
@@ -80,7 +84,7 @@
     display: block;
     width: 100%;
     margin-bottom: 18px;
-    height: 600px;
+    height: 800px;
     border-radius: 4px;
     margin-right: 0 !important;
   }
@@ -103,14 +107,27 @@
   }
 
   .row .block.stuff > li > .data:before {
-    width: 1200px;
-    height: 1200px;
-    top: 250px;
+    width: 1300px;
+    height: 1300px;
+    top: 350px;
+  }
+
+  .row .block.stuff li > .data {
+    padding: 70px;
+  }
+
+  td, th {
+    padding: 8px;
+    font-size: 27px;
   }
 
   .row .block.stuff li > .data ul li {
-    font-size: 34px;
-    padding: 20px;
+    font-size: 33px;
+    padding: 6px 0;
+  }
+
+  .row .block.stuff li > .data p {
+    font-size: 33px;
   }
 
   section#infos ul li {
