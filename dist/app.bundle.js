@@ -131,6 +131,7 @@ webpackJsonp([0],[
 
 	  events: {
 	    'click .openDropdown': 'showDropdown',
+	    'click .openPopup': 'openPopup',
 	    'click header .scrollTo': 'scrollTo',
 	    'click': 'hideDropdown',
 	    'click .veil': 'closePopup',
@@ -175,23 +176,18 @@ webpackJsonp([0],[
 	    return this;
 	  },
 
-	  openPopup: function(e, id) {
-
-	    this.currentPopup = id;
+	  openPopup: function() {
 
 	    $('body').addClass('modal-open');
-	    this.$el.find(this.currentPopup).show(0).addClass('open');
+	    this.$el.find('#stats').show(0).addClass('open');
 	    return this;
 	  },
 
-	  closePopup: function(e) {
-
-	    window.history.pushState(null, null, this.currentPlace);
+	  closePopup: function() {
 
 	    $('body').removeClass('modal-open');
-	    this.$el.find(this.currentPopup).hide(0).removeClass('open');
+	    this.$el.find('#stats').hide(0).removeClass('open');
 
-	    this.currentPopup = null;
 	    return this;
 	  },
 
