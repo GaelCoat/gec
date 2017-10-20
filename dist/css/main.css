@@ -483,8 +483,12 @@ footer a{
   margin-right: 10px;
 }
 
-footer a:last-child{
+footer .left a:last-child{
   margin-left: 10px;
+}
+
+footer .right a{
+  color: #ff5a79;
 }
 
 .popup{
@@ -531,6 +535,21 @@ footer a:last-child{
 .popup.open .modal{
   transform: scale(1);
   opacity: 1;
+}
+
+.popup .close{
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #fff;
+  border-radius: 60px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.popup .close img{
+  display: block;
+  margin: 0;
 }
 
 .popup .modal .top{

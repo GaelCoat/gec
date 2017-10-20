@@ -16,6 +16,7 @@ module.exports = Marionette.View.extend({
     'click header .scrollTo': 'scrollTo',
     'click': 'hideDropdown',
     'click .veil': 'closePopup',
+    'click .close': 'closePopup',
   },
 
   currentPopup: null,

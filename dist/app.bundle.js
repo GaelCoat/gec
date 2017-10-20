@@ -135,6 +135,7 @@ webpackJsonp([0],[
 	    'click header .scrollTo': 'scrollTo',
 	    'click': 'hideDropdown',
 	    'click .veil': 'closePopup',
+	    'click .close': 'closePopup',
 	  },
 
 	  currentPopup: null,
@@ -412,7 +413,7 @@ webpackJsonp([0],[
 	    cover: './img/covers/bordeaux.jpg',
 	    infos: {
 	      phone: '05 56 94 15 31',
-	      mail: 'hello-bordeaux@gec.fr',
+	      mail: 'hello-bordeaux@sarlgec.fr',
 	      address: {
 	        alley: '5 place des Quinconces',
 	        post: '33000 Bordeaux'
@@ -435,7 +436,7 @@ webpackJsonp([0],[
 	    cover: './img/covers/biscarosse.jpg',
 	    infos: {
 	      phone: '05 58 78 70 30',
-	      mail: 'hello-biscarosse@gec.fr',
+	      mail: 'hello-biscarosse@sarlgec.fr',
 	      address: {
 	        alley: '222 avenue du XIV Juillet',
 	        post: '40600 Biscarrosse'
@@ -458,7 +459,7 @@ webpackJsonp([0],[
 	    cover: './img/covers/sanguinet.jpg',
 	    infos: {
 	      phone: '05 58 04 81 78',
-	      mail: 'hello-sanguinet@gec.fr',
+	      mail: 'hello-sanguinet@sarlgec.fr',
 	      address: {
 	        alley: '21 avenue du Stade',
 	        post: '40460 Sanguinet'

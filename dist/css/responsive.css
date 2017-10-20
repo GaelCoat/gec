@@ -252,4 +252,15 @@
   .popup .modal ul li:last-child{
     padding-bottom: 45px;
   }
+
+  .popup .close{
+    right: 16px;
+    top: 16px;
+    border-radius: 100px;
+    padding: 9px;
+  }
+
+  .popup .close img{
+    width: 55px;
+  }
 }
